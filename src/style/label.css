@@ -1,0 +1,28 @@
+.label {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px 3px;
+  font-size: 14px;
+  background-color: #66b3ff;
+  color: #fff;
+  margin: 4px 6px;
+  border-radius: 3px;
+}
+.label span {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 5px;
+}
+.label i {
+  float: right;
+  width: 20px;
+  height: 18px;
+  line-height: 18px;
+  font-style: initial;
+  text-align: center;
+  cursor: pointer;
+}

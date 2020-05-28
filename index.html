@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .button { display: inline-block; cursor: pointer; border: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <div onclick="openDialog()" class="button">开开开</div>
+  <script>
+    function openDialog () {
+      var dialog = new Select()
+      dialog.init({
+        title: '你好，我是个弹窗',
+        role: 'ADMIN'
+      }).then(() => {
+        console.log('confirm')
+      }).catch(() => {
+        console.log('close')
+      })
+    }
+  </script>
+</body>
+</html>

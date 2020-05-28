@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "h"
+      }
+    ],
+    [
+      "transform-class-properties"
+    ]
+  ]
+}

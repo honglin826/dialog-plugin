@@ -1,0 +1,106 @@
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--opacity-gray);
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.mask.show {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.mask.hide {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/******** dialog start *********/
+
+.dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 950px;
+  transform: translate(-50%, -50%);
+  background: var(--lighter-gray);
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/* header */
+.header {
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--main-bg);
+}
+
+.title {
+  line-height: 30px;
+  color: var(--write);
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.closeIcon {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+}
+
+/* container */
+
+.container {
+  padding: 10px 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* footer */
+
+.footer {
+  height: 45px;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+
+/******** dialog end *********/
+
+.dialogDispose{
+  animation: scaleOut 0.3s ease-in-out;
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
